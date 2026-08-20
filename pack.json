@@ -1,0 +1,19 @@
+{
+  "name": "rigCad",
+  "url": "https://github.com/rigkid/rigCad.git",
+  "ref": "main",
+  "version": "0.1.0",
+  "author": "Rigkid",
+  "license": "MIT Rigkid Contributors",
+  "description": "CAD orchestration (code editor + Python + Manifold) — rigcad sketch module when embeds available.",
+  "dependencies": [
+    "rigComponent",
+    "rigImGui",
+    "rigCodeEditor",
+    "rigPython",
+    "rigManifold"
+  ],
+  "include_paths": [
+    "src"
+  ]
+}

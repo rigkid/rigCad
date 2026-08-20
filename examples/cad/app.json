@@ -1,0 +1,17 @@
+{
+  "name": "rigCad",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "rigCad Manifold sketch",
+  "window": { "width": 1100, "height": 720, "title": "rigCad — cad" },
+  "dependencies": [
+    { "name": "rigComponent", "url": "https://github.com/rigkid/rigComponent.git", "ref": "main" },
+    { "name": "rigSystems", "url": "https://github.com/rigkid/rigSystems.git", "ref": "main" },
+    { "name": "rigRender3D", "url": "https://github.com/rigkid/rigRender3D.git", "ref": "main" },
+    { "name": "rigImGui", "url": "https://github.com/rigkid/rigImGui.git", "ref": "main" },
+    { "name": "rigCodeEditor", "url": "https://github.com/rigkid/rigCodeEditor.git", "ref": "main" },
+    { "name": "rigPython", "url": "https://github.com/rigkid/rigPython.git", "ref": "main" },
+    { "name": "rigManifold", "url": "https://github.com/rigkid/rigManifold.git", "ref": "main" },
+    { "name": "rigCad", "url": "https://github.com/rigkid/rigCad.git", "ref": "main" }
+  ]
+}
