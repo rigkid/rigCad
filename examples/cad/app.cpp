@@ -1,11 +1,8 @@
 #include "app.h"
 
-#include "rendering/U_gladGlfw.h"
-#include <spdlog/spdlog.h>
-#include "CLight.h"
-#include "CTransform.h"
-#include "core/RigKitEngine.h"
 #include "core/pack/MPack.h"
+#include "core/RigKitEngine.h"
+#include "rendering/U_gladGlfw.h"
 #include "packs/rigCad/src/rigCad.h"
 #include "packs/rigCodeEditor/src/rigCodeEditor.h"
 #include "packs/rigComponent/src/rig.h"
@@ -15,6 +12,10 @@
 #include "packs/rigPython/src/rigPython.h"
 #include "packs/rigRender3D/src/rigRender3D.h"
 #include "packs/rigSystems/src/rigSystems.h"
+#include "CLight.h"
+#include "CTransform.h"
+
+#include <spdlog/spdlog.h>
 
 void CadApp::parseCommandLineArgs(const rigkit::CommandLineArgs& args) {
 	IApp::parseCommandLineArgs(args);
@@ -24,7 +25,7 @@ void CadApp::parseCommandLineArgs(const rigkit::CommandLineArgs& args) {
 }
 
 void CadApp::setup() {
-	spdlog::info("cad — Python + Manifold sketch orchestration");
+	spdlog::info("cad - Python + Manifold sketch orchestration");
 	m_engine->setClearColor(0.10f, 0.11f, 0.14f, 1.0f);
 
 	auto* packs = m_engine->getPackManager();
@@ -56,9 +57,9 @@ void CadApp::setup() {
 	}
 
 	m_smokeOk = cad->ready();
-	spdlog::info("cad — ready={} ({})", cad->ready(), cad->lastError());
+	spdlog::info("cad - ready={} ({})", cad->ready(), cad->lastError());
 	if (!m_smokeOk) {
-		spdlog::error("cad — not ready");
+		spdlog::error("cad - not ready");
 	}
 
 	if (m_smoke) {

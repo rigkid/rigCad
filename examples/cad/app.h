@@ -7,7 +7,7 @@ class CadApp : public rigkit::IApp {
 	CadApp() {
 		window().width = 1100;
 		window().height = 720;
-		window().title = "rigCad — cad";
+		window().title = "rigCad - cad";
 	}
 	void parseCommandLineArgs(const rigkit::CommandLineArgs& args) override;
 	void setup() override;

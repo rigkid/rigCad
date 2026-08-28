@@ -1,13 +1,13 @@
 #include "CadSketch.h"
 
-#include <new>
-#include <spdlog/spdlog.h>
-
-#include "ManifoldMesh.h"
 #include "ecs/MEcs.h"
+#include "ManifoldMesh.h"
 #include "rig/create.h"
 #include "rigManifold.h"
 #include "rigPython.h"
+
+#include <new>
+#include <spdlog/spdlog.h>
 
 #if defined(RIGPYTHON_HAS_EMBED) && defined(RIGMANIFOLD_HAS_KERNEL)
 #include <Python.h>
@@ -109,7 +109,7 @@ PyMethodDef kMethods[] = {
 	{"box", py_box, METH_VARARGS, "box(sx, sy, sz, center=True) -> solid"},
 	{"difference", py_difference, METH_VARARGS, "difference(a, b) -> solid"},
 	{"union", py_union, METH_VARARGS, "union(a, b) -> solid"},
-	{"show", py_show, METH_VARARGS, "show(solid) — spawn CMesh entity"},
+	{"show", py_show, METH_VARARGS, "show(solid) - spawn CMesh entity"},
 	{nullptr, nullptr, 0, nullptr},
 };
 

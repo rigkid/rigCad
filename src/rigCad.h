@@ -2,7 +2,6 @@
 
 #include <memory>
 #include <string>
-
 #include "core/pack/IPack.h"
 
 namespace rigkit {

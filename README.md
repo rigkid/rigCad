@@ -4,7 +4,7 @@
 ![preview](examples/cad/img/preview.png)
 
 
-Live-scripted **3D CAD** orchestration — code editor + Python sketches + Manifold CSG.
+Live-scripted **3D CAD** orchestration - code editor + Python sketches + Manifold CSG.
 
 ## Depends
 
@@ -12,7 +12,7 @@ Live-scripted **3D CAD** orchestration — code editor + Python sketches + Manif
 |------|------|
 | **rigCodeEditor** | Sketch buffer UI |
 | **rigPython** | Embed + `eval` |
-| **rigManifold** | CSG → `CMesh` |
+| **rigManifold** | CSG to `CMesh` |
 | **rigRender3D** | Present solids (hero) |
 | **rigImGui** | Host shell / windows |
 

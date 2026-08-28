@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Rigkid",
   "license": "MIT Rigkid Contributors",
-  "description": "CAD orchestration (code editor + Python + Manifold) — rigcad sketch module when embeds available.",
+  "description": "CAD orchestration (code editor + Python + Manifold) - rigcad sketch module when embeds available.",
   "dependencies": [
     "rigComponent",
     "rigImGui",

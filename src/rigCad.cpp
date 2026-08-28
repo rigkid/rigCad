@@ -1,15 +1,16 @@
 #include "rigCad.h"
 
-#include <spdlog/spdlog.h>
+#include "core/IMui.h"
+#include "core/pack/MPack.h"
+#include "core/pack/PackRegistry.h"
+#include "core/RigKitEngine.h"
 #include "CadSketch.h"
 #include "CodeEditorWindow.h"
 #include "MWindow.h"
-#include "core/IMui.h"
-#include "core/RigKitEngine.h"
-#include "core/pack/MPack.h"
-#include "core/pack/PackRegistry.h"
 #include "rigManifold.h"
 #include "rigPython.h"
+
+#include <spdlog/spdlog.h>
 
 namespace rigkit {
 
@@ -49,11 +50,11 @@ void rigCad::setup() {
 	m_ready = py && py->available() && man && man->available();
 	if (!m_ready) {
 		m_lastError = "waiting for rigPython + rigManifold embeds";
-		spdlog::info("[rigCad] setup — ready=false ({})", m_lastError);
+		spdlog::info("[rigCad] setup - ready=false ({})", m_lastError);
 		return;
 	}
 	m_lastError.clear();
-	spdlog::info("[rigCad] setup — ready=true");
+	spdlog::info("[rigCad] setup - ready=true");
 
 	std::string err;
 	if (!cad::installBindings(*py, *man, engine->getECSManager(), &err)) {

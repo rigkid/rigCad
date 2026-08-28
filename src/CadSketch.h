@@ -26,7 +26,7 @@ bool runSketch(rigPython& py, rigManifold& man, MEcs* ecs, const std::string& so
 inline constexpr const char* kDefaultSketchPath = "sketch.py";
 
 inline constexpr const char* kStarterSketch =
-	"# rigCad sketch — Manifold CSG via rigcad\n"
+	"# rigCad sketch - Manifold CSG via rigcad\n"
 	"from rigcad import box, difference, show\n"
 	"show(difference(box(40, 30, 20), box(20, 14, 12)))\n";
 
