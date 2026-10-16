@@ -1,7 +1,7 @@
 file(READ "${CMAKE_CURRENT_LIST_DIR}/pack.json" PACK_JSON)
 string(JSON PACK_NAME GET "${PACK_JSON}" name)
 
-foreach(_dep IN ITEMS rigComponent rigImGui)
+foreach(_dep IN ITEMS rigComponent rigCadComponent rigImGui)
 	if(NOT TARGET ${_dep})
 		if(DEFINED RIGKIT_ROOT AND NOT RIGKIT_ROOT STREQUAL "")
 			set(_dir "${RIGKIT_ROOT}/packs/${_dep}")
@@ -41,6 +41,9 @@ if(TARGET rigImGui)
 endif()
 if(TARGET rigComponent)
 	target_link_libraries(${PACK_NAME} PUBLIC rigComponent)
+endif()
+if(TARGET rigCadComponent)
+	target_link_libraries(${PACK_NAME} PUBLIC rigCadComponent)
 endif()
 target_include_directories(${PACK_NAME} PUBLIC
 	$<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/src>

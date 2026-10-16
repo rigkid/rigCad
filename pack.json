@@ -11,7 +11,8 @@
     "rigImGui",
     "rigCodeEditor",
     "rigPython",
-    "rigManifold"
+    "rigManifold",
+    "rigCadComponent"
   ],
   "include_paths": [
     "src"
