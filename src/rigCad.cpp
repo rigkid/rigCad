@@ -7,6 +7,7 @@
 #include "CadSketch.h"
 #include "CodeEditorWindow.h"
 #include "MWindow.h"
+#include "Mui.h"
 #include "rigManifold.h"
 #include "rigPython.h"
 
@@ -41,8 +42,9 @@ void rigCad::setup() {
 	m_manifold = man;
 
 	auto* ui = engine->getUiManager();
-	if (ui && ui->getWindowManager()) {
-		if (auto ed = ui->getWindowManager()->getWindow<CodeEditorWindow>("Code Editor")) {
+	auto* mui = dynamic_cast<Mui*>(ui);
+	if (mui && mui->getWindowManager()) {
+		if (auto ed = mui->getWindowManager()->getWindow<CodeEditorWindow>("Code Editor")) {
 			ed->setText(cad::kStarterSketch, TextEditor::LanguageDefinitionId::Python);
 		}
 	}
